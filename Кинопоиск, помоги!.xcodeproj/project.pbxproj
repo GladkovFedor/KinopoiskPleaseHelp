@@ -9,23 +9,25 @@
 /* Begin PBXBuildFile section */
 		A14459E42BC43596001DC57A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14459E32BC43596001DC57A /* AppDelegate.swift */; };
 		A14459E62BC43596001DC57A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14459E52BC43596001DC57A /* SceneDelegate.swift */; };
-		A14459E82BC43596001DC57A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14459E72BC43596001DC57A /* ViewController.swift */; };
-		A14459EB2BC43596001DC57A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14459E92BC43596001DC57A /* Main.storyboard */; };
+		A14459E82BC43596001DC57A /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A14459E72BC43596001DC57A /* HelpViewController.swift */; };
 		A14459EE2BC43596001DC57A /* __________________.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A14459EC2BC43596001DC57A /* __________________.xcdatamodeld */; };
 		A14459F02BC43598001DC57A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A14459EF2BC43598001DC57A /* Assets.xcassets */; };
 		A14459F32BC43598001DC57A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14459F12BC43598001DC57A /* LaunchScreen.storyboard */; };
+		A156733F2BC5666B00D53074 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156733E2BC5666B00D53074 /* Film.swift */; };
+		A15673422BC56AB400D53074 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15673412BC56AB400D53074 /* HistoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		A14459E02BC43596001DC57A /* Кинопоиск, помоги!.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Кинопоиск, помоги!.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A14459E32BC43596001DC57A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A14459E52BC43596001DC57A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		A14459E72BC43596001DC57A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		A14459EA2BC43596001DC57A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A14459E72BC43596001DC57A /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		A14459ED2BC43596001DC57A /* __________________.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = "__________________.xcdatamodel"; sourceTree = "<group>"; };
 		A14459EF2BC43598001DC57A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A14459F22BC43598001DC57A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A14459F42BC43598001DC57A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A156733E2BC5666B00D53074 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
+		A15673412BC56AB400D53074 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +60,25 @@
 		A14459E22BC43596001DC57A /* Кинопоиск, помоги! */ = {
 			isa = PBXGroup;
 			children = (
+				A15673402BC567FB00D53074 /* Models */,
 				A14459E32BC43596001DC57A /* AppDelegate.swift */,
 				A14459E52BC43596001DC57A /* SceneDelegate.swift */,
-				A14459E72BC43596001DC57A /* ViewController.swift */,
-				A14459E92BC43596001DC57A /* Main.storyboard */,
+				A14459E72BC43596001DC57A /* HelpViewController.swift */,
+				A15673412BC56AB400D53074 /* HistoryViewController.swift */,
 				A14459EF2BC43598001DC57A /* Assets.xcassets */,
 				A14459F12BC43598001DC57A /* LaunchScreen.storyboard */,
 				A14459F42BC43598001DC57A /* Info.plist */,
 				A14459EC2BC43596001DC57A /* __________________.xcdatamodeld */,
 			);
 			path = "Кинопоиск, помоги!";
+			sourceTree = "<group>";
+		};
+		A15673402BC567FB00D53074 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				A156733E2BC5666B00D53074 /* Film.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +141,6 @@
 			files = (
 				A14459F32BC43598001DC57A /* LaunchScreen.storyboard in Resources */,
 				A14459F02BC43598001DC57A /* Assets.xcassets in Resources */,
-				A14459EB2BC43596001DC57A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -141,8 +151,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A14459E82BC43596001DC57A /* ViewController.swift in Sources */,
+				A156733F2BC5666B00D53074 /* Film.swift in Sources */,
+				A14459E82BC43596001DC57A /* HelpViewController.swift in Sources */,
 				A14459EE2BC43596001DC57A /* __________________.xcdatamodeld in Sources */,
+				A15673422BC56AB400D53074 /* HistoryViewController.swift in Sources */,
 				A14459E42BC43596001DC57A /* AppDelegate.swift in Sources */,
 				A14459E62BC43596001DC57A /* SceneDelegate.swift in Sources */,
 			);
@@ -151,14 +163,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		A14459E92BC43596001DC57A /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				A14459EA2BC43596001DC57A /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		A14459F12BC43598001DC57A /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -294,9 +298,9 @@
 				DEVELOPMENT_TEAM = CZQUC67234;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Кинопоиск, помоги!/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -322,9 +326,9 @@
 				DEVELOPMENT_TEAM = CZQUC67234;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Кинопоиск, помоги!/Info.plist";
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
