@@ -15,6 +15,8 @@
 		A14459F32BC43598001DC57A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A14459F12BC43598001DC57A /* LaunchScreen.storyboard */; };
 		A156733F2BC5666B00D53074 /* Film.swift in Sources */ = {isa = PBXBuildFile; fileRef = A156733E2BC5666B00D53074 /* Film.swift */; };
 		A15673422BC56AB400D53074 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A15673412BC56AB400D53074 /* HistoryViewController.swift */; };
+		A1AA96222BCE51B4003A2F9A /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA96212BCE51B4003A2F9A /* TabBarController.swift */; };
+		A1AA96252BCE52C1003A2F9A /* Resourses.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1AA96242BCE52C1003A2F9A /* Resourses.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		A14459F42BC43598001DC57A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A156733E2BC5666B00D53074 /* Film.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Film.swift; sourceTree = "<group>"; };
 		A15673412BC56AB400D53074 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		A1AA96212BCE51B4003A2F9A /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		A1AA96242BCE52C1003A2F9A /* Resourses.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Resourses.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,10 +65,9 @@
 			isa = PBXGroup;
 			children = (
 				A15673402BC567FB00D53074 /* Models */,
-				A14459E32BC43596001DC57A /* AppDelegate.swift */,
-				A14459E52BC43596001DC57A /* SceneDelegate.swift */,
-				A14459E72BC43596001DC57A /* HelpViewController.swift */,
-				A15673412BC56AB400D53074 /* HistoryViewController.swift */,
+				A1AA96232BCE5264003A2F9A /* Helpers */,
+				A1AA96262BCE58FA003A2F9A /* Application */,
+				A1AA96272BCE5FDD003A2F9A /* Controllers */,
 				A14459EF2BC43598001DC57A /* Assets.xcassets */,
 				A14459F12BC43598001DC57A /* LaunchScreen.storyboard */,
 				A14459F42BC43598001DC57A /* Info.plist */,
@@ -79,6 +82,33 @@
 				A156733E2BC5666B00D53074 /* Film.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		A1AA96232BCE5264003A2F9A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				A1AA96242BCE52C1003A2F9A /* Resourses.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		A1AA96262BCE58FA003A2F9A /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A14459E52BC43596001DC57A /* SceneDelegate.swift */,
+				A14459E32BC43596001DC57A /* AppDelegate.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		A1AA96272BCE5FDD003A2F9A /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A1AA96212BCE51B4003A2F9A /* TabBarController.swift */,
+				A14459E72BC43596001DC57A /* HelpViewController.swift */,
+				A15673412BC56AB400D53074 /* HistoryViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -155,6 +185,8 @@
 				A14459E82BC43596001DC57A /* HelpViewController.swift in Sources */,
 				A14459EE2BC43596001DC57A /* __________________.xcdatamodeld in Sources */,
 				A15673422BC56AB400D53074 /* HistoryViewController.swift in Sources */,
+				A1AA96222BCE51B4003A2F9A /* TabBarController.swift in Sources */,
+				A1AA96252BCE52C1003A2F9A /* Resourses.swift in Sources */,
 				A14459E42BC43596001DC57A /* AppDelegate.swift in Sources */,
 				A14459E62BC43596001DC57A /* SceneDelegate.swift in Sources */,
 			);
