@@ -27,19 +27,15 @@ final class TabBarController: UITabBarController {
     
     private func configure() {
         
-        tabBar.tintColor = Resourses.colors.selected
-        tabBar.barTintColor = Resourses.colors.unselested
-        tabBar.backgroundColor = Resourses.colors.background
+        tabBar.tintColor = Resourses.Colors.selected
+        tabBar.barTintColor = Resourses.Colors.unselested
+        tabBar.backgroundColor = Resourses.Colors.background
         
-//        tabBar.layer.borderColor = Resourses.colors.separator.cgColor
-//        tabBar.layer.borderWidth = 1
-//        tabBar.layer.masksToBounds = true
-        
-        let searchController = HelpViewController()
+        let searchController = SearchViewController()
         let historyController = HistoryViewController()
         
-        let searchNavigation = UINavigationController(rootViewController: searchController)
-        let historyNavigation = UINavigationController(rootViewController: historyController)
+        let searchNavigation = NavBarController(rootViewController: searchController)
+        let historyNavigation = NavBarController(rootViewController: historyController)
         
         searchNavigation.tabBarItem = UITabBarItem(title: Resourses.Strings.TabBar.search,
                                                    image: Resourses.Images.TabBar.search,
@@ -54,5 +50,4 @@ final class TabBarController: UITabBarController {
         ], animated: false)
         
     }
-
 }

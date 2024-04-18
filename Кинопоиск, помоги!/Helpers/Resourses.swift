@@ -8,7 +8,7 @@
 import UIKit
 
 enum Resourses {
-    enum colors {
+    enum Colors {
         static var orange = UIColor.orange
         static var background = UIColor.black
         static var selected = UIColor.white
@@ -20,7 +20,7 @@ enum Resourses {
     enum Strings {
         enum TabBar {
             static var search = "Помоги"
-            static var history = "История поиска"
+            static var history = "История"
         }
     }
     
@@ -30,7 +30,4 @@ enum Resourses {
             static var history = UIImage(systemName: "clock")
         }
     }
-    
-    
-//   чек для сорстри
 }
