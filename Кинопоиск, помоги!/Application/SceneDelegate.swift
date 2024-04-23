@@ -10,26 +10,6 @@ import UIKit
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
-    
-//    func createHelpController() -> UINavigationController {
-//        let helpController = UINavigationController(rootViewController: HelpViewController())
-//            helpController.tabBarItem = UITabBarItem(title: "Помоги", image: UIImage(systemName: "questionmark.video.fill"), tag: 0)
-//        return helpController
-//    }
-//
-//    func createHistoryController() -> UINavigationController {
-//        let historyController = UINavigationController(rootViewController: HistoryViewController())
-//            historyController.tabBarItem = UITabBarItem(title: "История", image: UIImage(systemName: "clock"), tag: 1)
-//        return historyController
-//    }
-//
-//    func createTabBar() -> UITabBarController {
-//        let tabBar = UITabBarController()
-//        tabBar.viewControllers = [createHelpController(), createHistoryController()]
-//        tabBar.tabBar.unselectedItemTintColor = .systemGray
-//        tabBar.tabBar.tintColor = .white
-//        return tabBar
-//    }
 
     func scene(_ scene: UIScene,
                willConnectTo session: UISceneSession,

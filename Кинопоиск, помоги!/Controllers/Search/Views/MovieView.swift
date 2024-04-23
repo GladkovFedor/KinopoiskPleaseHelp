@@ -35,6 +35,8 @@ class MovieView: UIView {
     }
 }
 
+// MARK: - Extensions
+
 extension MovieView {
     
     func setupViews() {

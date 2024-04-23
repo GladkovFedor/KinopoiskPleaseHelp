@@ -23,6 +23,8 @@ final class FilterButton: UIButton {
     
 }
 
+// MARK: - Extensions
+
 private extension FilterButton {
     
     func configure() {

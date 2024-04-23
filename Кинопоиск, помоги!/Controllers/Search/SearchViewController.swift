@@ -9,6 +9,8 @@ import UIKit
 
 class SearchViewController: BaseController {
     
+    var movie: Movie?
+    
     var tapCounter = 0
     
     var searchButton = UIButton(type: .system)
@@ -18,13 +20,15 @@ class SearchViewController: BaseController {
     let topButton = FilterButton(withTitle: "Топ250")
     let serialButton = FilterButton(withTitle: "Сериал")
     
-    let movie = MovieView()
+    let movieView = MovieView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
     }
 }
+
+// MARK: - Extensions
 
 extension SearchViewController {
     
@@ -33,7 +37,7 @@ extension SearchViewController {
         
         view.setupView(searchButton)
         view.setupView(buttonsStack)
-        view.setupView(movie)
+        view.setupView(movieView)
         buttonsStack.addArrangedSubview(topButton)
         buttonsStack.addArrangedSubview(raitingButton)
         buttonsStack.addArrangedSubview(serialButton)
@@ -51,10 +55,10 @@ extension SearchViewController {
             buttonsStack.trailingAnchor.constraint(equalTo: safeLayout.trailingAnchor, constant: -5),
             buttonsStack.heightAnchor.constraint(equalToConstant: 25),
             
-            movie.topAnchor.constraint(equalTo: buttonsStack.bottomAnchor, constant: 10),
-            movie.bottomAnchor.constraint(equalTo: searchButton.topAnchor, constant: -5),
-            movie.leadingAnchor.constraint(equalTo: safeLayout.leadingAnchor),
-            movie.trailingAnchor.constraint(equalTo: safeLayout.trailingAnchor),
+            movieView.topAnchor.constraint(equalTo: buttonsStack.bottomAnchor, constant: 10),
+            movieView.bottomAnchor.constraint(equalTo: searchButton.topAnchor, constant: -5),
+            movieView.leadingAnchor.constraint(equalTo: safeLayout.leadingAnchor),
+            movieView.trailingAnchor.constraint(equalTo: safeLayout.trailingAnchor),
             
             searchButton.centerXAnchor.constraint(equalTo: safeLayout.centerXAnchor),
             searchButton.bottomAnchor.constraint(equalTo: safeLayout.bottomAnchor, constant: -5),
@@ -62,7 +66,6 @@ extension SearchViewController {
             searchButton.widthAnchor.constraint(equalToConstant: 250),
             
         ])
-        
     }
     
     override func configure() {
@@ -87,12 +90,33 @@ extension SearchViewController {
         searchButton.layer.cornerRadius = 25
         searchButton.addTarget(self, action: #selector(helpButtonPressed), for: .touchUpInside)
     }
+    
+    func getMovie() {
+        
+        let network = NetworkService()
+        let urlString = Resourses.Network.URLs.randomMovie
+        
+        network.request(urlString: urlString) { [weak self] (result) in
+            switch result {
+                
+            case .success(let movie):
+                self?.movie = movie
+                
+                print("Название - \(movie.name)\nГод выпуска - \(movie.year)\nРейтинги:\nКинопоиск - \(movie.rating.kp), IMDb - \(movie.rating.imdb)\n")
+                
+                StorageManager.shared.createMovie(name: movie.name, year: movie.year)
+                
+            case .failure(let error):
+                print(error)
+            }
+        }
+    }
 }
 
 @objc extension SearchViewController {
  
     func topButtonPressed(_ handler: UIButton) {
-        print("top btn pressed")
+        print("top btn pressed\n")
         
         if topButton.isSelected == false {
             topButton.isSelected = true
@@ -103,6 +127,10 @@ extension SearchViewController {
             topButton.backgroundColor = .black
             topButton.layer.borderWidth = 2
         }
+        
+        let moviesInCD = StorageManager.shared.fetchMovies()
+        print("В CoreDat'е уже \(moviesInCD.count) фильма(-ов)!")
+        print("А последний рекомендованый - \(moviesInCD[(moviesInCD.count - 1)].name ?? "oshibka")")
     }
     
     func raitingButtonPressed(_ handler: UIButton) {
@@ -120,7 +148,7 @@ extension SearchViewController {
     }
     
     func serialButtonPressed(_ handler: UIButton) {
-        print("serial btn pressed")
+        print(movie)
         
         if serialButton.isSelected == false {
             serialButton.isSelected = true
@@ -136,6 +164,9 @@ extension SearchViewController {
         print("Button pressed")
         
         self.searchButton.setTitle("Давай еще!", for: .normal)
+        
+        getMovie()
+        
 
 //        Ниже лежит блок с анимацией съезжания кнопки "Кинопоиск, помоги!" вниз
 //        при ее центральном расположении.

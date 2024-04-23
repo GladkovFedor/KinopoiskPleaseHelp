@@ -24,6 +24,9 @@ class FilmInfoLabel: UILabel {
     
     
 }
+
+// MARK: - Extensions
+
 extension FilmInfoLabel {
     func configure() {
         textColor = Resourses.Colors.unselested

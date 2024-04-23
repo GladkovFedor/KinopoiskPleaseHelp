@@ -30,4 +30,20 @@ enum Resourses {
             static var history = UIImage(systemName: "clock")
         }
     }
+    
+    enum Network {
+        static var apiToken = "WBB9V86-DKHMCTG-PAMWCZE-HDWW16H"
+        static var header = "X-API-KEY"
+        
+        static var httpGETMethod = "GET"
+        enum URLs {
+            static var randomMovie = "https://api.kinopoisk.dev/v1/movie/random"
+            
+//            let urlTop250 = "https://api.kinopoisk.dev/v1.4/movie/random?lists=top250"
+            //        let urlSeries = "https://api.kinopoisk.dev/v1.4/movie/random?type=tv-series"
+            //        let urlRaiting = ""
+            //        let urlSeriesTop250 = "https://api.kinopoisk.dev/v1.4/movie/random?type=tv-series&lists=top250"
+        }
+    }
+    
 }

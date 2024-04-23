@@ -46,6 +46,8 @@ class BaseController: UIViewController {
     }
 }
 
+// MARK: - Extensions
+
 extension BaseController {
     func addNavBarButton(to position: Position, with title: String) {
         
